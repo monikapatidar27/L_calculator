@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="card " >
+            <div class="card-header ">LOVE CALCULATOR</div>
+            <div class="card-body">
+                <form class="form-inline">
+                    <div class="form-group ">
+                        <input type="text" name="" class="form-control text-center" placeholder="Your Name" id="name">
+                    </div>
+                    <div><span class="pl-4 pr-4">+ </span> </div>
+                    <div class="form_group">
+                        <input type="text" name=""class="form-control text-center" placeholder="Love Name" id="lname">
+                    </div>
+                </form><br>
+                <div class="w-75 m-auto">
+                    <button class="btn btn-success" onclick="checkfunction()">Click</button>
+                </div><br>
+                <div>
+                    <input type="text" name="" id="Lovevalue" class="form-control text-center w-25 m-auto" placeholder="Love Percentage">
+                </div><br>
+            </div>
+            <div class="card-footer">GOD BLESS YOU!</div>
+          </div>
+    </header>
+<script>
+        function checkfunction(){
+            var name = document.getElementById('name').value;
+            var lname = document.getElementById('lname').value;
+            if(name == ""){
+                alert('Please enter your name')
+            }
+            else if(name.length <= 2){
+                alert('Min_length is 2');
+            }
+            else if(!isNaN(name)){
+                alert('Number are not allowed');
+            }
+            if(lname == ""){
+                alert('Please enter your name')
+            }
+            else if(lname.length <= 2){
+                alert('Min_length is 2');
+            }
+            else if(!isNaN(lname)){
+                alert('Number are not allowed');
+            }
+            var ldata = Math.random()*100;
+            ldata = Math.floor(ldata);
+            document.getElementById('Lovevalue').value = ldata + "%";
+        }
+</script>
+</body>
+</html>
